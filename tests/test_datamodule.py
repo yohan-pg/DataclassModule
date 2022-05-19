@@ -1,11 +1,11 @@
-from datamodule import DataModule
+from dataclassmodule import DataclassModule
 
 import torch
 import torch.nn as nn
 
 
 def test_dataclass_fields_are_added():
-    class ExampleModule(DataModule):
+    class ExampleModule(DataclassModule):
         x: int
 
     try:
@@ -19,7 +19,7 @@ def test_dataclass_fields_are_added():
 
 
 def test_nn_module_is_initialized():
-    class ExampleModule(DataModule):
+    class ExampleModule(DataclassModule):
         def __post_init__(self):
             self.layer = nn.Linear(2, 2)
 
@@ -30,7 +30,7 @@ def test_nn_module_is_initialized():
 
 
 def test_parameters_are_registered_properly():
-    class ExampleModule(DataModule):
+    class ExampleModule(DataclassModule):
         def __post_init__(self):
             self.param = nn.parameter.Parameter(torch.tensor([0.0]))
 
@@ -38,7 +38,7 @@ def test_parameters_are_registered_properly():
 
 
 def test_repr_method_is_from_dataclass_and_str_method_is_from_nn_module():
-    class ExampleModule(DataModule):
+    class ExampleModule(DataclassModule):
         __qualname__ = "ExampleModule" # avoids local scope name alteration 
         y: bool = False
 

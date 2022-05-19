@@ -1,13 +1,13 @@
-# datamodule
+# DataclassModule
 
 dataclass + nn.Module
 
 ## Usage 
 
 ```python
-from datamodule import DataModule
+from dataclassmodule import DataclassModule
 
-class ExampleModule(DataModule):
+class ExampleModule(DataclassModule):
     x: int
     
     def __post_init__(self):

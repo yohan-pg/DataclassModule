@@ -1,7 +1,8 @@
 [tool.poetry]
-name = "datamodule"
+name = "DataclassModule"
 version = "0.1.0"
-description = ""
+description = "dataclass + nn.Module"
+license = "MIT"
 authors = ["yohan-pg <pg.yohan@gmail.com>"]
 
 [tool.poetry.dependencies]

@@ -6,7 +6,7 @@ from typing_extensions import dataclass_transform
 
 
 @dataclass_transform(eq_default=False, kw_only_default=True)
-class DataModule(nn.Module):
+class DataclassModule(nn.Module):
     def __new__(cls, *_, **__):
         obj = super().__new__(cls)
         nn.Module.__init__(obj)
