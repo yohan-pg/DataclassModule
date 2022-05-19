@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "DataclassModule"
-version = "0.1.0"
+version = "0.1.1"
 description = "dataclass + nn.Module"
 license = "MIT"
 authors = ["yohan-pg <pg.yohan@gmail.com>"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
